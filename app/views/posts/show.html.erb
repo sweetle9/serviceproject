@@ -1,21 +1,18 @@
+<div class="wrapper_2">
 <p id="notice"><%= notice %></p>
 <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
 <div class="wrapper_content">
 <div class="content">
-	<strong>Автор:</strong>
-	<%= @post.author %>
+	<strong>Автор: <%= @post.author %></strong>
 </div>
 <div class="content">
-  <strong>Название картины:</strong>
-  <%= @post.name %>
+  <strong>Название картины: <%= @post.name %></strong>
 </div>
 <div class="content year">
-  <strong>Год создания:</strong>
-  <%= @post.title %>
+  <strong>Год создания: <%= @post.title %></strong>
 </div>
 <div class="content">
-  <strong>Период/Стиль:</strong>
-  <%= @post.content %>
+	<strong>Период/Стиль: <%= @post.content %></strong>
 </div>
 </div>
 <div class="editback">
@@ -26,3 +23,4 @@
 <%= render @post.comments %>
 <h2>Add a comment:</h2>
 <%= render "comments/form" %>
+</div>
