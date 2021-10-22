@@ -1,21 +1,20 @@
 <p id="notice"><%= notice %></p>
+<%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
 <p>
-  <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
-	<strong>Author:</strong>
+	<strong>Автор:</strong>
 	<%= @post.author %>
 </p>
 <p>
-  <strong>Name:</strong>
+  <strong>Название картины:</strong>
   <%= @post.name %>
 </p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Год создания:</strong>
   <%= @post.title %>
 </p>
-<%= link_to(image_tag(@post.image.small_thumb.url, alt: 'Image'), @post.image.url, target: '_blank') if @post.image? %>
 <p>
-  <strong>Content:</strong>
+  <strong>Период/Стиль:</strong>
   <%= @post.content %>
 </p>
 

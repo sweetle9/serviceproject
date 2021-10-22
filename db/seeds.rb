@@ -2,16 +2,18 @@ Post.destroy_all
 puts "Destroyed everything you touch"
 posts = [
 {
-	name: "New Album",
-	title: "The Bad Seeds",
-	author: "Nick Cave",
-	content: "Tracklist"
+	name: "Девочка на шаре",
+	title: "1913",
+	author: "Пабло Пикассо",
+	content: "«Голубой» и «Розовый»",
+	image: File.open(Rails.root.join('public', 'images', 'pic-1.jpg'))
 },
 {
-	name: "Old Album",
-	title: "The Bad Seeds Old",
-	author: "Nick Cave Old Too",
-	content: "Some Old Tracklist"
+	name: "Подсолнухи",
+	title: "1899",
+	author: "Винсент Ван Гог",
+	content: "Постимпрессионизм",
+	image: File.open(Rails.root.join('public', 'images', 'pic-2.jpg'))
 }
 ]
 
