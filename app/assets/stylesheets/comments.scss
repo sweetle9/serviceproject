@@ -1,3 +1,20 @@
-// Place all the styles related to the Comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.field {
+  font-family: 'Raleway', sans-serif; font-size: 18px; vertical-align: top; text-align: left; line-height: 12px;
+}
+h2 {
+  font-family: 'Raleway', sans-serif; font-weight: bold; font-size: 24px; vertical-align: top; text-align: left; line-height: 12px; margin-top: 23px;
+}
+#comment_body {
+  width: 300px;
+  height: 70px;
+  margin-bottom: 8px;
+  margin-top: 5px;
+}
+#comment_commenter {
+  width: 300px;
+  height: 20px;
+  margin-top: 5px;
+}
