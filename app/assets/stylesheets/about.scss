@@ -3,11 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
+
 .n_landing {
   display: block;
   position: relative;
   width: 100%;
   background-color: black;
+}
+
+.n_circle_red {
+  background: #ff7260;
+  border-radius: 50%;
+  width: 10%;
+  padding-left: 70%;
 }
 
 .n_LOGO {
@@ -27,7 +36,7 @@
   transform: translate(-50%, -50%);
 
   font-family: 'Poiret One';
-  font-size: 35px;
+  font-size: 2em;
   color: white;
   vertical-align: top;
   text-align: left;
@@ -56,7 +65,7 @@ height: 20%;
   font-family: 'Raleway', sans-serif;
   font-weight: 10;
   color: white;
-  font-size: 61px;
+  font-size: 5em;
   vertical-align: top;
   text-align: left;
   line-height: 55px;
