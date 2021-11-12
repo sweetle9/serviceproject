@@ -56,3 +56,7 @@ posts.each do |post|
 	postik = Post.create(post)
 	puts "Some magic just create a #{ postik.name } with id #{ postik.id }!"
 end
+
+
+# Post.destroy_all
+# puts "Destroyed everything you touch"
