@@ -11,13 +11,16 @@
     </div>
   <% end %>
   <div>
+
 	<%= form.label :image %>
 	<%= form.file_field :image %>
+
   </div>
   <div class="field">
   	<%= form.label :author %>
   	<%= form.text_field :author %>
   </div>
+
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -30,7 +33,7 @@
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.cktext_area :content %>
   </div>
 
   <div class="actions">
