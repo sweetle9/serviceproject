@@ -67,4 +67,9 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:name, :title, :content, :author, :image)
     end
+
+    def filtering_params(params)
+      params.slice(:user, :category, :starts_with)
+    end
+
 end

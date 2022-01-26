@@ -2,6 +2,13 @@
 <div class="wrapper_2">
 <h1>Posts</h1>
 
+<%= form_tag posts_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :starts_with, params[:starts_with] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <table>
   <thead>
     <tr>

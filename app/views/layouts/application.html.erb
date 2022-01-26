@@ -21,7 +21,7 @@
 
  <div class="top_menu">
    <% if user_signed_in? %>
-     <%= link_to 'Аккаунт', edit_user_registration_path %> | <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
+     <%= link_to 'Аккаунт', current_user %> | <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
    <% else %>
      <%= link_to 'Вход', new_user_session_path %> | <%= link_to 'Регистрация', new_user_registration_path %>
    <% end %>
