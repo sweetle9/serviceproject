@@ -26,3 +26,8 @@ In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Po
 <% @posts.each do |post| %>
   <br><%= link_to post.title, post %>
 <% end %>
+<div class="">
+        <% if user_signed_in? && current_user.isadmin == true && @user.id != current_user.id %>
+              <%= link_to 'Переназначить', edit_user_path(@user) %>
+        <% end%>
+      </div>
