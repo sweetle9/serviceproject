@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Панель администрирования</h1>
+<div class="">
+  <%= link_to "Публикации", admin_path %>
+  <strong><%= link_to "Комментарии", comments_path %></strong>
+  <%= link_to "Пользователи", users_path %>
+  <%= link_to "Жанры", categories_path %>
+</div>
 <h1>Categories</h1>
 
 <table>
