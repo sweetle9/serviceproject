@@ -1,29 +1,112 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body{
+   min-height: 100vh;
+ }
 
- .top_menu {
+ @font-face {
+   font-family: "SuisseIntlRegular";
+   font-style: normal;
+   src: url("../Fonts/SuisseIntl-Regular.ttf") format("ttf"),
+   url("../Fonts/SuisseIntl-Regular.woff") format("woff"),
+   url("../Fonts/SuisseIntl-Regular.woff2") format("woff2");
+ }
+
+ @font-face {
+   font-family: "SuisseIntlSemiBold";
+   font-style: normal;
+   src: url("../Fonts/SuisseIntl-SemiBold.ttf") format("ttf"),
+   url("../Fonts/SuisseIntl-SemiBold.woff") format("woff"),
+   url("../Fonts/SuisseIntl-SemiBold.woff2") format("woff2");
+ }
+
+.top_menu {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 60px;
-  background: #eee;
-  border-bottom: 1px solid #ddd;
-  white-space: nowrap;
+  height: 4.167vw;
+  background: #000;
+  color: #fff;
+  font-size: 1.059vw;
+  font-weight: 600;
+  position: fixed;
+  z-index: 100;
+  top: 0;
 }
 .top_menu a {
-  margin: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 3.472vw;
+  font-size: 1.059vw;
+  font-weight: 600;
 }
+
+/* apppers ony if user logged in as a user */
+.user_panel{
+  position: absolute;
+  width: 19.236vw;
+  height: 100%;
+  background: #fff;
+}
+
+/* apppers ony if user logged in as an admin */
+.admin_panel{
+  display: block;
+  position: absolute;
+  width: 19.236vw;
+  height: 100%;
+  top: 0;
+  background: #fff;
+}
+.all_links{
+  position: fixed;
+  display: flex;
+  height: 14vw;
+  flex-direction: column;
+  margin-top: 8.681vw;
+  margin-left: 1.736vw;
+  justify-content:space-between;
+}
+.all_links a{
+  padding-top: .5vw;
+  height: 2.778vw;
+  color: #000;
+  font-size: 1.528vw;
+  font-weight: 600;
+  padding-left: 1.736vw;
+  text-decoration: none;
+}
+.chosen{
+  margin: 0;
+  width: 15.694vw;
+  height: 2.778vw;
+  background: #E5E5E5;
+  border-radius: 0.417vw;
+}
+.search form{
+    margin: 0;
+    width: 26.847vw;
+    height: 2.381vw;
+    background: #fff;
+}
+.search form input[type="text"]{
+  outline-width: 0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-writing-mode: none ;
+  color: transparent;
+  border-color: none;
+  background: transparent;
+  border: none;
+  font-size: 1.190vw;
+  font-weight: 400;
+  color: #444;
+  padding-left: .8vw;
+}
+.search form input[type="submit"]{
+  width: 1.7vw;
+  height: 1.7vw;
+  background-image: url("search.svg");;
+  background-size: 100%;
+  margin-top: .3vw;
+  margin-right: 1vw;

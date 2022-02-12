@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%# stylesheet_link_tag    params["controller"], media: 'screen' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag Ckeditor.cdn_url %>
-
+    <% if user_signed_in? && current_user.isadmin == true %>
+       <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+   <% end %>
   </head>
+
   <% if notice %>
     <p class="notice"><%= notice %></p>
   <% elsif alert %>
     <p class="alert"><%= alert %></p>
   <% end %>
+
   <body>
       <div class="top_menu">
         <% Category.where(display_in_navbar: true).each do |cat| %>
@@ -30,7 +33,6 @@
         <%= link_to "Панель администрирования", admin_path %>
       <% end %>
     </div>
-    <%= react_component 'Tests' %>
       <header>
         <#%= image_tag("logo.svg") %>
         <nav>

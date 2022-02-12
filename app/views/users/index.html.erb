@@ -5,13 +5,14 @@
     <%= link_to "Публикации", admin_path %>
     <strong><%= link_to "Комментарии", comments_path %></strong>
     <%= link_to "Пользователи", users_path %>
-    <%= link_to "Жанры", categories_path %>
+    <%= link_to "Стили", categories_path %>
   </div>
   <thead>
     <tr>
       <th>ID</th>
-      <th>Email</th>
-      <th>Username</th>
+      <th>Почта</th>
+      <th>Ник</th>
+      <th>Роль</th>
     </tr>
   </thead>
 
@@ -21,6 +22,7 @@
         <td><%= user.id %></td>
         <td><%= link_to user.email, user %></td>
         <td><%= user.username %></td>
+        <td><%= (user.isadmin) == true ? "админ" : "юзер" %></td>
       </tr>
     <% end %>
 

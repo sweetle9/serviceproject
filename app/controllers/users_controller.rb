@@ -14,14 +14,14 @@ class UsersController < ApplicationController
     # current_user.update(params[:user])
     # redirect_to current_user
     respond_to do |format|
-      if @user.update(user_params)
-         format.html { redirect_to @user, notice: 'The user info was successfully updated' }
-         format.json { render :show, status: :ok, location: @user }
-      else
-         format.html { render :edit }
-         format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.update(user_params)
+      format.html { redirect_to @user, notice: 'Пользователь was successfully переназначен.' }
+      format.json { render :show, status: :ok, location: @user }
+    else
+      format.html { render :edit }
+      format.json { render json: @user.errors, status: :unprocessable_entity }
     end
+  end
   end
 
   def show
@@ -74,7 +74,7 @@ private
   end
 
   def user_params
-    params.require(:user).permit(:email, :username, :admin, :password)
+    params.require(:user).permit(:email, :username, :admin, :password, :avatar)
   end
 
 
