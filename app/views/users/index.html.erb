@@ -1,11 +1,13 @@
 <table>
   <h1>Панель администрирования</h1>
 
-  <div class="">
+  <div class="admin_panel">
+    <div class="all_links">
     <%= link_to "Публикации", admin_path %>
     <strong><%= link_to "Комментарии", comments_path %></strong>
     <%= link_to "Пользователи", users_path %>
     <%= link_to "Стили", categories_path %>
+    </div>
   </div>
   <thead>
     <tr>

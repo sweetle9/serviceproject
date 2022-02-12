@@ -1,26 +1,39 @@
-<h2>Log in</h2>
+<div class="whole_form">
+  <div class="enter_form">
+    <div class="inner_content">
+      <h2>Вход</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email, "Эл-почта" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email"%>
+        </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+        <div class="field">
+          <%= f.label :password, "Пароль" %>
+          <%= f.password_field :password, autocomplete: "current-password"%>
+        </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+        <% if devise_mapping.rememberable? %>
+          <div class="checkbox_field">
+
+            <div class="container">
+              <%= f.check_box :remember_me %>
+              <span class="checkmark"></span>
+            </div>
+            <%= f.label :remember_me, "Запомнить меня" , :class =>"tap" %>
+          </div>
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit "Войти" %>
+        </div>
+      <% end %>
+
+      <div class="else">
+        <%= render "devise/shared/links" %>
+      </div>
+
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
