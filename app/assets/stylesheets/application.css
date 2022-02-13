@@ -1,7 +1,9 @@
 body{
    min-height: 100vh;
    background: #F0F0F0;
+   font-family: 'SuisseIntlRegular';
  }
+/* Подключение */
 
  @font-face {
    font-family: "SuisseIntlRegular";
@@ -280,4 +282,677 @@ input[type="submit"]{
   color: #000;
   font-weight: 600;
   margin: .2vw;
+}
+
+/* Посты */
+
+.uhodi {
+  color: green;
+}
+.none {
+  display: none;
+}
+.upperrow {
+  display: flex;
+}
+.edit > * {
+  border-radius: none;
+  outline-offset: none;
+}
+.lnl {
+  width: 20vw;
+  border: none;
+  color: black;
+  padding: 10px;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 108%;
+}
+.lnl:focus {
+  border: none;
+  outline: none !important;
+  box-shadow: none;
+}
+.ok {
+  margin-right: 5%;
+  width: auto !important;
+}
+.logo {
+  width: 45px;
+  height: 45px;
+  background: url("logo.svg");
+  background-size: contain;
+}
+.logo:hover {
+  opacity: 0.5;
+}
+.acc {
+  display: flex;
+  align-items: center;
+
+}
+.acc a {
+  margin-left: 15px;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 108%;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 8vh;
+}
+.allin {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.comment_section h2 {
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 108%;
+  color: #D2FB51;
+}
+.separate {
+  padding: 22px;
+  background: white;
+  width: 36.72vw;
+  margin-bottom: 1.7vw;
+}
+.linkc a {
+  color: black;
+}
+.left_menu {
+  background-color:#272727;
+  width: 23.96vw;
+  height: auto;
+  margin-top: 0vw;
+}
+.left_menu p {
+  margin: 0;
+  font-family: SuisseIntlRegular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 108%;
+  margin-bottom: 10px;
+}
+.left_menu a {
+  color:white;
+  font-family: SuisseIntlRegular;
+}
+.all_post {
+  width: 53.54vw;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.post_container {
+  transition: all 0.2s ease;
+  position: relative;
+  width: 25.97vw;
+  background: white;
+  margin-bottom: 20px;
+  color: black;
+}
+.pi, .edit, .new, .ci, .newpost, .editpost{
+  width: 53.54vw;
+}
+.newpost h1, .editpost h1 {
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 108%;
+  color: #D2FB51;
+}
+.fir {
+  margin-top: 0;
+}
+.e_n {
+  display: flex;
+}
+.imgp {
+  width: 300px;
+  height: 300px;
+  margin-right: 2vw;
+}
+.pinfo {
+  display: flex;
+}
+.pinfo h1 {
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 108%;
+  color: #D2FB51;
+  padding: 0;
+  margin: 0;
+}
+.pinfo p {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 108%;
+  color: #FFFFFF;
+}
+.statics {
+  margin-top: 4%;
+  display: flex;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 108%;
+  color: #FFFFFF;
+  align-items: baseline
+}
+.statics > * {
+  margin-right: 7vw;
+}
+.statics p {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 108%;
+  color: #FFFFFF;
+      white-space: nowrap;
+}
+.fav {
+  margin-right: 0;
+}
+.fav a {
+  color: #333;
+}
+.fav a:hover {
+  color: white;
+}
+.ptinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.postinfo {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+.tgth {
+  display: flex;
+}
+.postinfo > * {
+  /* margin-right: 5%; */
+}
+.uhoh {
+  color: red;
+}
+.buttons {
+  display: flex;
+  margin-top: 15px;
+}
+.buttons a, .other a {
+  background: #D2FB51;
+  border: none;
+  color: black;
+  padding: 10px;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 108%;
+}
+.other a {
+  margin-right: 20px;
+}
+.other {
+  display: flex;
+  align-items: baseline
+}
+.lol {
+  background: #D2FB51;
+  border: none;
+  color: black;
+  padding: 10px;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 108%;
+}
+.more a {
+  background: #D2FB51;
+  border: none;
+  color: black;
+  padding: 10px;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 108%;
+}
+.dothis {
+  margin-top: 30px;
+  display: flex;
+  align-items: baseline;
+}
+.dothis p {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.lil {
+  background: #D2FB51;
+  border: none;
+  color: black;
+  padding: 11px;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 108%;
+}
+.timeline_and_add {
+  position: relative;
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  justify-content: space-between;
+}
+.line {
+  position: relative;
+  width: 6px;
+  background: #D2FB51;
+  height: calc(100% - 14%);
+}
+.line_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 700px;
+  /* background: blue; */
+}
+.allevents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.event {
+  display: flex;
+  margin-left: -50px;
+}
+.eventinfo {
+  margin-left: 1.9vw;
+}
+.h1 h1 {
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 108%;
+  color: white;
+  margin: -2px;
+  margin-right: 10px;
+}
+.eventinfo .h1 {
+  display: flex;
+  margin-bottom: 15px;
+}
+.eventinfo p {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 108%;
+  color: white;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.dot {
+  width: 50px;
+  height: 50px;
+  background: #D2FB51;
+  border-radius: 100%;
+
+}
+.timeline {
+  display: flex;
+}
+.add {
+  width: 25.97vw;
+}
+.add h2 {
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 108%;
+  color: white;
+  margin-bottom: 8%;
+}
+.field {
+  width: 90%;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 108%;
+  color: white;
+}
+.eve {
+  margin-bottom: 20px !important;
+
+}
+.lal {
+  min-width: 38.5vw;
+  border: none;
+  color: black;
+  padding: 10px;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 108%;
+  max-width: 38.5vw;
+}
+.lel {
+  width: 90%;
+  border: none;
+  color: black;
+  padding: 10px;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 108%;
+  max-width: 100%;
+  margin-top: 7px;
+}
+.lel:focus {
+  border: none;
+  outline: none !important;
+  box-shadow: none;
+}
+.ev {
+  margin-top: 7%;
+}
+.lal:focus {
+  border: none;
+  outline: none !important;
+  box-shadow: none;
+}
+.buttons > * {
+  transition: 0.1s ease all;
+  margin-right: 20px;
+}
+.buttons > *:hover {
+  opacity: 0.5;
+}
+.lol:hover {
+  opacity: 0.5;
+}
+.updown {
+  margin-right: 7%;
+  font-size: 36px;
+  line-height: 49px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6.1%;
+}
+.arrow {
+  width: 13px;
+  height: 10px;
+  background: url("arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sleep {
+  opacity: 0.3;
+}
+.down {
+  transform: rotate(180deg);
+}
+.a_c {
+  display: flex;
+}
+.a_c p {
+  display: flex;
+  color: white;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 108%;
+}
+.about {
+  color: white;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 108%;
+  width: 25.97vw;
+}
+.a_c > * {
+  margin-right: 20px;
+}
+/* .post_container:hover .hov {
+  opacity: 0.4;
+} */
+.post_container:hover {
+  opacity: 0.5;
+}
+.hov {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #D2FB51;
+  opacity: 0;
+}
+#green {
+  color: #D2FB51;
+}
+.info {
+  padding: 22px;
+  min-height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cover {
+  height: 315px;
+}
+.downinfo {
+  font-size: 18px;
+  line-height: 108%;
+  display: flex;
+  justify-content: space-between;
+}
+.rating {
+  display: flex;
+  align-items: baseline;
+}
+.rating span {
+  font-size: 24px;
+  line-height: 108%;
+  margin-right: 5px;
+}
+.postname {
+  margin: 0;
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 108%;
+  color: black;
+  width: 70%;
+}
+.postname2 {
+  margin: 0;
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 108%;
+  color: black;
+  width: 100%;
+  white-space: nowrap;
+}
+.all_container {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.fit-image {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+  /* height: auto; */
+  /* min-height: 100%;
+  min-width: 100%; */
+}
+.pic {
+  overflow: hidden;
+  width: 25.97vw;
+  height: 19.44vw;
+  background: #D2FB51;
+}
+.uppercomment {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+.uppercomment p {
+  color: black;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+.body {
+  color: black;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+.commenter {
+  margin-left: 13px;
+}
+.uppercomment span {
+  margin-left: 20px;
+}
+.top_menu .avatar {
+  margin-left: 30px;
+}
+.avatar {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.avatar a {
+  margin: 0;
+}
+.av {
+  object-position: center center;
+  object-fit: cover;
+  width: 100%;
+}
+.avatar:hover {
+  opacity: 0.5;
+}
+.cover {
+  display: flex;
+  overflow: hidden;
+}
+.cov {
+  object-fit: cover;
+  width: 100%;
+}
+.cats {
+  /* background: red; */
+  display: flex;
+  justify-content: flex-end;
+  height: 3vw;
+}
+.cats p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.cats > * {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 108%;
+  color: white;
+  margin-left: 20px;
+}
+a:hover {
+  color: #333;
+}
+th {
+  text-align: left;
+}
+#categ {
+  margin-left: 23px;
+}
+.avall {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.avall:hover {
+  opacity: 0.5;
+}
+.ci td {
+  padding-top: 20px;
+}
+#cey {
+  margin-top: 82.19px;
+}
+.cey {
+  margin-top: 82.19px;
+
+}
+.ceyy a {
+  color: #D2FB51;;
+}
+.accounts, .ci {
+  color: white;
+  width: 53.54vw;
+}
+.accounts td, .ci td {
+  font-family: Rubik;
+  font-size: 24px;
+  line-height: 108%;
+}
+.accounts th:first-of-type {
+  width: 0;
+}
+/* .accounts th:first-of-type {
+  width: 0;
+} */
+.accounts table, .ci table {
+  border-spacing: 23px 0px;
+  border-collapse: separate;
+}
+.accounts th, .ci th {
+  margin: 0;
+  font-family: Rubik Mono One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 108%;
+  color: #D2FB51;
+  width: 70%;
 }
