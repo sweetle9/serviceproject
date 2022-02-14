@@ -1,46 +1,55 @@
 <p id="notice"><%= notice %></p>
-<%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
 
-<div class="content">
-	<strong>Автор: <%= @post.author %></strong>
+<p class="third"><%= link_to "← назад", "../posts" %></p>
+
+<div class="cover">
+  <%= image_tag(@post.image.url, alt: 'Image', class: 'cov') if @post.image? %>
+	<div class="postinfo">
+	  <div class="tgth">
+	    <div class="posttext">
+	      <div class="a_c">
+	        <p>
+	          @<%= User.find(@post.user_id).username %>
+	        </p>
+					<% if user_signed_in? %>
+								<% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+							<% if pre_favorite %>
+									<%= button_to 'Удалить из избранного', post_favorite_path(@post, pre_favorite), method: :delete, class: "lol" %>
+							<% else %>
+									<%= button_to 'Добавить в избранное', post_favorites_path(@post), method: :post, class: "lol" %>
+							<% end %>
+					<% end %>
+	      </div>
+	      <p class="postname2" id="black">
+	        <%= @post.name %>
+	      </p>
+				<p class="about">
+			    <%= @post.content %>
+					<%= @post.category.name %>
+					<%= @post.author %>
+			  </p>
+	      <div class="buttons">
+	        <% if user_signed_in? && current_user.id == @post.user_id %>
+	          <%= link_to 'Редактировать', edit_post_path(@post) %>
+	        <% end %>
+	        <% if user_signed_in? && current_user.id == @post.user_id or user_signed_in? && current_user.isadmin %>
+	          <%= link_to 'Удалить', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+	        <% end %>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 </div>
-<div class="content">
-  <strong>Название картины: <%= @post.name %></strong>
+
+<div class="comment_section">
+  <h2>Комментарий:</h2>
+  <% if user_signed_in? %>
+  <%= render "comments/form" %>
+  <% else %>
+  <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
+  <% end %>
+
+  <div class="allin">
+      <%= render @post.comments.select(&:persisted?) %>
+  </div>
 </div>
-<div class="content">
-  <strong>Год создания: <%= @post.title %></strong>
-</div>
-
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content.html_safe %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @post.category.name %>
-</p>
-
-
-<h2>Comments</h2>
-<%= render @post.comments %>
-
-<% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
-<% if pre_favorite %>
-    <%= button_to 'Remove from Favorite', post_favorite_path(@post, pre_favorite), method: :delete %>
-<% else %>
-    <%= button_to 'Add to Favorite', post_favorites_path(@post), method: :post %>
-<% end %>
-
-<h2>Add a comment:</h2>
-<% if user_signed_in? %>
-<%= render "comments/form" %>
-<% else %>
-<p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
-<% end %>
-
-<% if user_signed_in? %>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
-<%= link_to 'Back', posts_path %>

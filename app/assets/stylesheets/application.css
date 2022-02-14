@@ -41,7 +41,7 @@ body{
 .top_menu a {
   color: #fff;
   text-decoration: none;
-  margin: 0 3.472vw;
+  margin: 0 2vw;
   font-size: 1.059vw;
   font-weight: 600;
 }
@@ -349,16 +349,17 @@ body {
 .allin {
   margin-top: 5%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .comment_section h2 {
-  font-family: Rubik Mono One;
+  font-family: SuisseIntlRegular;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 108%;
-  color: #D2FB51;
+  color: black;
 }
 .separate {
   padding: 22px;
@@ -370,7 +371,7 @@ body {
   color: black;
 }
 .left_menu {
-  background-color:#272727;
+  background-color:##F0F0F0;
   width: 23.96vw;
   height: auto;
   margin-top: 0vw;
@@ -382,14 +383,14 @@ body {
   font-weight: normal;
   font-size: 24px;
   line-height: 108%;
-  margin-bottom: 10px;
+  margin-bottom: 1vw;
 }
 .left_menu a {
-  color:white;
+  color:black;
   font-family: SuisseIntlRegular;
 }
 .all_post {
-  width: 53.54vw;
+  width: 74.54vw;
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
@@ -398,9 +399,9 @@ body {
 .post_container {
   transition: all 0.2s ease;
   position: relative;
-  width: 25.97vw;
+  width: 21vw;
   background: white;
-  margin-bottom: 20px;
+  margin-bottom: 1vw;
   color: black;
 }
 .pi, .edit, .new, .ci, .newpost, .editpost{
@@ -484,12 +485,14 @@ body {
   justify-content: space-between
 }
 .postinfo {
-  margin-top: 2%;
-  display: flex;
-  justify-content: space-between;
+  margin-top:0;
+  display: block;
+  position: relative;
+  width: 46vw;
 }
 .tgth {
   display: flex;
+  height: 100%;
 }
 .postinfo > * {
   /* margin-right: 5%; */
@@ -498,17 +501,13 @@ body {
   color: red;
 }
 .buttons {
-  display: flex;
-  margin-top: 15px;
+  display: block;
 }
-.buttons a, .other a {
-  background: #D2FB51;
-  border: none;
-  color: black;
-  padding: 10px;
-  font-family: Rubik;
-  font-size: 18px;
-  line-height: 108%;
+
+.buttons > * {
+  transition: 0.1s ease all;
+  margin-right: 20px;
+  height: 2.381vw;
 }
 .other a {
   margin-right: 20px;
@@ -522,7 +521,7 @@ body {
   border: none;
   color: black;
   padding: 10px;
-  font-family: Rubik;
+  font-family: SuisseIntlRegular;
   font-size: 18px;
   line-height: 108%;
 }
@@ -531,7 +530,7 @@ body {
   border: none;
   color: black;
   padding: 10px;
-  font-family: Rubik;
+  font-family: SuisseIntlRegular;
   font-size: 18px;
   line-height: 108%;
 }
@@ -550,30 +549,9 @@ body {
   border: none;
   color: black;
   padding: 11px;
-  font-family: Rubik;
+  font-family: SuisseIntlRegular;
   font-size: 18px;
   line-height: 108%;
-}
-.timeline_and_add {
-  position: relative;
-  display: flex;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  justify-content: space-between;
-}
-.line {
-  position: relative;
-  width: 6px;
-  background: #D2FB51;
-  height: calc(100% - 14%);
-}
-.line_container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 50px;
-  height: 700px;
-  /* background: blue; */
 }
 .allevents {
   display: flex;
@@ -632,15 +610,6 @@ body {
   line-height: 108%;
   color: white;
   margin-bottom: 8%;
-}
-.field {
-  width: 90%;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 108%;
-  color: white;
 }
 .eve {
   margin-bottom: 20px !important;
@@ -714,20 +683,21 @@ body {
   transform: rotate(180deg);
 }
 .a_c {
-  display: flex;
+  display:block;
 }
 .a_c p {
-  display: flex;
-  color: white;
-  font-family: Rubik;
+  display: block;
+  position: relative;
+  color: black;
+  font-family: SuisseIntlRegular;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 108%;
 }
 .about {
-  color: white;
-  font-family: Rubik;
+  color: black;
+  font-family: SuisseIntlRegular;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -749,11 +719,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #D2FB51;
+  background: black;
   opacity: 0;
 }
-#green {
-  color: #D2FB51;
+#black {
+  color: black;
 }
 .info {
   padding: 22px;
@@ -763,7 +733,7 @@ body {
   justify-content: space-between;
 }
 .cover {
-  height: 315px;
+  height:40vw;
 }
 .downinfo {
   font-size: 18px;
@@ -816,7 +786,7 @@ body {
 }
 .pic {
   overflow: hidden;
-  width: 25.97vw;
+  width: 21vw;
   height: 19.44vw;
   background: #D2FB51;
 }
@@ -824,21 +794,14 @@ body {
   display: flex;
   align-items: center;
   color: black;
-  font-family: Rubik;
+  font-family: SuisseIntlRegular;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
 }
 .uppercomment p {
   color: black;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-}
-.body {
-  color: black;
-  font-family: Rubik;
+  font-family: SuisseIntlRegular;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -871,30 +834,52 @@ body {
 }
 .cover {
   display: flex;
-  overflow: hidden;
+  justify-content: space-between;
 }
-.cov {
+/* .cov {
   object-fit: cover;
   width: 100%;
-}
+} */
 .cats {
   /* background: red; */
   display: flex;
   justify-content: flex-end;
   height: 3vw;
+  margin-top:4vw;
+  margin-bottom: 1vw;
 }
 .cats p {
   margin-top: 0;
   margin-bottom: 0;
 }
 .cats > * {
-  font-family: Rubik;
+  font-family: SuisseIntlRegular ;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 108%;
-  color: white;
+  color: black;
   margin-left: 20px;
+}
+.third {
+  /* background: red; */
+  display: flex;
+  justify-content: flex-start;
+  height: 3vw;
+  margin-top:4vw;
+  margin-bottom: 1vw;
+}
+.third p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.third > * {
+  font-family: SuisseIntlRegular ;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 108%;
+  color: black;
 }
 a:hover {
   color: #333;
@@ -955,4 +940,46 @@ th {
   line-height: 108%;
   color: #D2FB51;
   width: 70%;
+}
+.posttext {
+  width: 46vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
+.buttons a, .other a {
+  width: auto;
+  border: none;
+  height: 2.7vw;
+  font-weight: 600;
+  border-radius: 0.3vw;
+  padding: .7vw 1vw;
+  font-size: .9vw;
+  color: #fff;
+  background: #272727;
+  cursor: pointer;
+}
+.buttons_r a, .other a {
+  width: auto;
+  border: none;
+  height: 2.7vw;
+  font-weight: 600;
+  border-radius: 0.3vw;
+  padding: .7vw 1vw;
+  font-size: .9vw;
+  color: #fff;
+  background: #BC3A3A;
+  cursor: pointer;
+}
+p#black.postname2 {
+  margin-bottom:.2vw;
+}
+#comment_body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 20vw;
+  height: 5vw;
+  margin-top: 3vw;
 }

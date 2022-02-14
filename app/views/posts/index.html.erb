@@ -6,7 +6,7 @@
 
 
 <div class="cats">
-	<p><%= link_to "все", "../posts" %></p>
+	<p><%= link_to "Все", "../posts" %></p>
 	<% Category.all.each do |cat| %>
 		<%= link_to cat.name, posts_path(category: cat.name) %>
 	<% end %>

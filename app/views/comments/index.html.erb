@@ -13,8 +13,8 @@
         <span>
             <strong>КОММЕНТАРИЙ</strong>
         </span>
-        <p>Имя пользователя:_ <%= User.find(comment.user_id).email %> </p>
-        <p>Текст комментария:_<%= comment.body %></p>
+        <p>Пользователь:_ <%= User.find(comment.user_id).email %> </p>
+        <p>ТКоментарий:_<%= comment.body %></p>
         <p>Айди поста:_<%= comment.post_id %></p>
 
         <p>
@@ -22,7 +22,7 @@
                          :confirm => 'Are you sure?',
                          :method => :show %>
         </p>
-        <p>
+        <p class='buttons_r'>
           <%= link_to 'Destroy Comment', [comment.post, comment],
                        :confirm => 'Are you sure?',
                        :method => :delete %>
