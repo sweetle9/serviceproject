@@ -1,4 +1,7 @@
 class Post < ApplicationRecord
+		scope :filter_by_starts_with, -> (name) { where("name like ?", "%#{name}%")}
+		scope :filter_by_user, -> (user) { where user: user }
+		scope :filter_by_category, -> (category) { where category: category }
 		validates :category, :presence => true
 		validates :name, :presence => true
 		validates :title, :presence => true,

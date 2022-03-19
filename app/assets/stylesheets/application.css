@@ -4,22 +4,28 @@ body{
    font-family: 'SuisseIntlRegular';
  }
 /* Подключение */
-
  @font-face {
    font-family: "SuisseIntlRegular";
    font-style: normal;
-   src: url("../Fonts/SuisseIntl-Regular.ttf") format("ttf"),
-   url("../Fonts/SuisseIntl-Regular.woff") format("woff"),
-   url("../Fonts/SuisseIntl-Regular.woff2") format("woff2");
+   src: url("fonts/SuisseIntl-Regular.ttf") format("ttf"),
+   url("fonts/SuisseIntl-Regular.woff") format("woff"),
+   url("fonts/SuisseIntl-Regular.woff2") format("woff2");
  }
 
  @font-face {
    font-family: "SuisseIntlSemiBold";
    font-style: normal;
-   src: url("../Fonts/SuisseIntl-SemiBold.ttf") format("ttf"),
-   url("../Fonts/SuisseIntl-SemiBold.woff") format("woff"),
-   url("../Fonts/SuisseIntl-SemiBold.woff2") format("woff2");
+   src: url("fonts/SuisseIntl-SemiBold.ttf") format("ttf"),
+   url("fonts/SuisseIntl-SemiBold.woff") format("woff"),
+   url("fonts/SuisseIntl-SemiBold.woff2") format("woff2");
  }
+ .avatar_round {
+  border-radius: 50px;
+}
+.avatar_post {
+  margin-right: 13px;
+  margin-top: 4px;
+}
 .submit input {
   background: black;
 }

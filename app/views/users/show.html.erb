@@ -2,7 +2,9 @@
   <p>Admin <%= @user.isadmin %></p>
 
 <% end %>
-
+<div class="avatar_round">
+  <%= image_tag(@user.avatar.url, alt: 'Avatar', :class => "avatar_round") if @user.avatar? %>
+</div>
 <p>ID <%= @user.id %></p>
 <p>Email <%= @user.email %></p>
 <p>Username <%= @user.username %></p>

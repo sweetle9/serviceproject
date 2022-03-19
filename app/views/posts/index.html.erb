@@ -3,7 +3,12 @@
 <p id="notice"><%= notice %></p>
 
 <!-- <h1>Posts</h1> -->
-
+<%= form_tag posts_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :starts_with, params[:starts_with] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
 
 <div class="cats">
 	<p><%= link_to "Все", "../posts" %></p>
@@ -18,7 +23,7 @@
 	<div class="left_menu">
 			<p class="second"><%= link_to "Посты", "../posts" %></p>
 			<p><%= link_to "Пользователи", users_path %></p>
-			<p><%#= link_to "Категории", categories_path %></p>
+			<p><%= link_to "Категории", categories_path %></p>
 			<p><%= link_to 'Новый пост', new_post_path %></p>
 	</div>
 

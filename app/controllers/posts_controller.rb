@@ -4,12 +4,19 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    if params.has_key?(:category)
-      @category = Category.find_by_name(params[:category])
-      @posts = Post.where(category: @category)
-    else
-      @posts = Post.all
-    end
+    @posts = Post.where(nil)
+    filtering_params(params).each do |key, value|
+    @posts = @posts.public_send("filter_by_#{key}", value) if value.present?
+  end
+    # @posts = Post.where(nil)
+    # @posts = @posts.filter_by_user(params[:user]) if params[:user].present?
+    # @posts = @posts.filter_by_category(params[:category]) if params[:category].present?
+    # if params.has_key?(:category)
+    #   @category = Category.find_by_name(params[:category])
+    #   @posts = Post.where(category: @category)
+    # else
+    #   @posts = Post.all
+    # end
   end
 
   # GET /posts/1 or /posts/1.json
@@ -27,8 +34,8 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params.merge(user_id: current_user.id))
-
+    # @post = Post.new(post_params.merge(user_id: current_user.id))
+    @post = Post.new
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: "Вы создали пост." }
@@ -64,13 +71,16 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def filtering_params(params)
+      params.slice(:user, :category, :starts_with)
+    end
     def set_post
       @post = Post.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :title, :content, :author, :image, :category_id)
+      params.require(:post).permit(:user_id, :name, :title, :content, :author, :image, :category_id)
     end
 
     # def filtering_params(params)
