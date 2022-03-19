@@ -6,8 +6,8 @@ puts "Destroyed everything you touch"
  user = User.new(
       :email                 => "second@gmail.com",
       :username              => "PicassoLover",
-      :password              => "123456",
-      :password_confirmation => "123456",
+      :password              => "123456789",
+      :password_confirmation => "123456789",
       :id 					=> "2"
   )
   user.save!
@@ -15,8 +15,8 @@ puts "Destroyed everything you touch"
 user = User.new(
       :email                 => "first@gmail.com",
       :username              => "ArtIsHard",
-      :password              => "123456",
-      :password_confirmation => "123456",
+      :password              => "123456789",
+      :password_confirmation => "123456789",
       :id 					=> "1"
   )
   user.save!
