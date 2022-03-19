@@ -1,6 +1,25 @@
 Post.destroy_all
 Category.destroy_all
+User.destroy_all
 puts "Destroyed everything you touch"
+
+ user = User.new(
+      :email                 => "second@gmail.com",
+      :username              => "PicassoLover",
+      :password              => "123456",
+      :password_confirmation => "123456",
+      :id 					=> "2"
+  )
+  user.save!
+
+user = User.new(
+      :email                 => "first@gmail.com",
+      :username              => "ArtIsHard",
+      :password              => "123456",
+      :password_confirmation => "123456",
+      :id 					=> "1"
+  )
+  user.save!
 
 categories = [
 {
@@ -68,7 +87,7 @@ posts = [
 	author: "Питер Брейгель Старший",
 	content: "Северное Возрождение",
   	category_id:12,
-  	user_id: 1,
+  	user_id: 2,
 	image: File.open(Rails.root.join('public', 'images', 'pic-5.jpg'))
 },
 {
@@ -77,7 +96,7 @@ posts = [
 	author: "Эдвард Мунк",
 	content: "Экспрессионизм",
   	category_id:12,
-  	user_id: 1,
+  	user_id: 2,
 	image: File.open(Rails.root.join('public', 'images', 'pic-6.jpg'))
 },
 {
