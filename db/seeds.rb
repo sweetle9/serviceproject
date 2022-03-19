@@ -1,12 +1,14 @@
 Post.destroy_all
 puts "Destroyed everything you touch"
+
+
 posts = [
 {
 	name: "Девочка на шаре",
 	title: "1913",
 	author: "Пабло Пикассо",
 	content: "«Голубой» и «Розовый»",
-  	category_id: 4,
+  	category_id: 10,
 	user_id:2,
 	image: File.open(Rails.root.join('public', 'images', 'pic-1.jpg'))
 },
@@ -15,7 +17,7 @@ posts = [
 	title: "1899",
 	author: "Винсент Ван Гог",
 	content: "Постимпрессионизм",
-  	category_id: 4,
+  	category_id: 10,
   	user_id: 1,
 	image: File.open(Rails.root.join('public', 'images', 'pic-2.jpg'))
 },
@@ -24,7 +26,7 @@ posts = [
 	title: "1905",
 	author: "Рембранбт",
 	content: "Барокко",
-  	category_id: 4,
+  	category_id: 10,
   	user_id: 1,
 	image: File.open(Rails.root.join('public', 'images', 'pic-3.jpg'))
 },
@@ -33,7 +35,7 @@ posts = [
 	title: "1938",
 	author: "Паул Рубенс",
 	content: "Барокко",
-  	category_id: 4,
+  	category_id: 10,
   	user_id: 1,
 	image: File.open(Rails.root.join('public', 'images', 'pic-4.jpg'))
 },
@@ -42,7 +44,7 @@ posts = [
 	title: "1899",
 	author: "Питер Брейгель Старший",
 	content: "Северное Возрождение",
-  	category_id: 4,
+  	category_id: 10,
   	user_id: 1,
 	image: File.open(Rails.root.join('public', 'images', 'pic-5.jpg'))
 },
@@ -51,7 +53,7 @@ posts = [
 	title: "1905",
 	author: "Эдвард Мунк",
 	content: "Экспрессионизм",
-  	category_id: 4,
+  	category_id: 10,
   	user_id: 1,
 	image: File.open(Rails.root.join('public', 'images', 'pic-6.jpg'))
 },
@@ -60,11 +62,12 @@ posts = [
 	title: "1881",
 	author: "Клод Моне",
 	content: "Импрессионизм",
-  	category_id: 4,
+  	category_id: 10,
   	user_id: 1,
 	image: File.open(Rails.root.join('public', 'images', 'pic-7.jpg'))
 }
 ]
+
 
 posts.each do |post|
 postik = Post.create!(post)
