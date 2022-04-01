@@ -13,6 +13,11 @@
    <% end %>
   </head>
 
+  <% current_user_id = 2 %>
+    <%if current_user%>
+      <%current_user_id= current_user.id%>
+    <% end %>
+
   <% if notice %>
     <p class="notice"><%= notice %></p>
   <% elsif alert %>
@@ -29,7 +34,11 @@
 
   <body>
   <%= react_component 'A_Logo' %>
+   <%= react_component 'A_Header', {current_user: current_user, current_user_id: current_user_id}%>
+
+
   
+
   <!-- <div class="top_menu">
     <%= link_to "Reset", posts_path %>
   	<% Category.all.each do |cat| %>

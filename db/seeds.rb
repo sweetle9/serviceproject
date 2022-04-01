@@ -8,7 +8,8 @@ puts "Destroyed everything you touch"
       :username              => "PicassoLover",
       :password              => "123456789",
       :password_confirmation => "123456789",
-      :id 					=> "2"
+      :id 					=> "2",
+      :avatar			    => File.open(Rails.root.join('public', 'images', 'pic-1.jpg'))
   )
   user.save!
 
@@ -17,7 +18,8 @@ user = User.new(
       :username              => "ArtIsHard",
       :password              => "123456789",
       :password_confirmation => "123456789",
-      :id 					=> "1"
+      :id 					=> "1",
+      :avatar			    => File.open(Rails.root.join('public', 'images', 'pic-1.jpg'))
   )
   user.save!
 
