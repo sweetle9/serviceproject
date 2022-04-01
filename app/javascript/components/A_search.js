@@ -8,7 +8,6 @@ class A_search extends React.Component {
           <p>Поиск</p>
           <div className="search_icon"></div>
         </div>
-        <div className="underline"></div>
       </div>
     );
   }

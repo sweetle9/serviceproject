@@ -3,13 +3,12 @@ import PropTypes from "prop-types"
 
 const A_avatar = ({
   avatar,
-  link,
-  size
+  link
 }) => {
     return (
       <a href={`/users/${link}`}>
         <div className="avatar_round">
-          <img className={size} src={`${avatar}`}/>
+          <img className={avatar} src={`${avatar}`}/>
         </div>
       </a> 
     );
