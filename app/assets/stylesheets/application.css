@@ -1029,6 +1029,11 @@ p#black.postname2 {
   display: block;
   margin-top: 8%;
 }
+.AllPostiks_mob {
+  position: relative;
+  display: block;
+  margin-top: 8%;
+}
 .AIconAddL {
   position: relative;
   width: 3vw;
@@ -1202,3 +1207,17 @@ p#black.postname2 {
   display: block;
   position: relative;
 }
+@media (min-width: 1680px) {
+  .AllPostiks_mob {
+    display: none;
+  }
+  }
+
+  @media (max-width: 768px) {
+   .AllPostiks_mob {
+    display: block;
+   }
+  /* .AllPostiks {
+    display: none;
+   }*/
+  }

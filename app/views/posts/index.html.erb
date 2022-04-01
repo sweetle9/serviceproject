@@ -1,16 +1,17 @@
 <%= stylesheet_link_tag 'postindex', media: 'all', 'data-turbolinks-track': 'reload'%>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <p id="notice"><%= notice %></p>
 
-<!-- <h1>Posts</h1> -->
 <%= form_tag posts_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :starts_with, params[:starts_with] %>
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
-	<%= react_component 'O_AllPosts', { posts: @posts } %>
 
+	<%= react_component 'O_AllPosts', { posts: @posts } %>
+	<%= react_component 'O_AllPostsMob', { posts: @posts } %>
+	
 </div>
 
 	<!-- <div class="all_post">
