@@ -20,7 +20,6 @@
   <% end %>
 
     <header>
-    
         <!-- <nav>
             <%= link_to "Промо", promo_path %>
             <%= link_to "О нас", about_path %>
@@ -29,8 +28,9 @@
     </header>
 
   <body>
-
-  <div class="top_menu">
+  <%= react_component 'A_Logo' %>
+  
+  <!-- <div class="top_menu">
     <%= link_to "Reset", posts_path %>
   	<% Category.all.each do |cat| %>
     <%= link_to cat.name, request.params.merge(category: cat.id) %> |
@@ -47,7 +47,7 @@
       <% if user_signed_in? && current_user.isadmin == true%>
         <%= link_to "Панель администрирования", admin_path %>
       <% end %>
-    </div>
+    </div> -->
 
         <%= yield %>
         <% if notice %>
