@@ -55,15 +55,6 @@ posts = [
 	image: File.open(Rails.root.join('public', 'images', 'pic-1.jpg'))
 },
 {
-	name: "Подсолнухи",
-	title: "1899",
-	author: "Винсент Ван Гог",
-	content: "Постимпрессионизм",
-  	category_id:12,
-  	user_id: 1,
-	image: File.open(Rails.root.join('public', 'images', 'pic-2.jpg'))
-},
-{
 	name: "Возвращение блудного сына",
 	title: "1905",
 	author: "Рембранбт",
@@ -91,15 +82,6 @@ posts = [
 	image: File.open(Rails.root.join('public', 'images', 'pic-5.jpg'))
 },
 {
-	name: "Крик",
-	title: "1905",
-	author: "Эдвард Мунк",
-	content: "Экспрессионизм",
-  	category_id:12,
-  	user_id: 2,
-	image: File.open(Rails.root.join('public', 'images', 'pic-6.jpg'))
-},
-{
 	name: "Сад в Ветейя",
 	title: "1881",
 	author: "Клод Моне",
@@ -107,6 +89,105 @@ posts = [
   	category_id: 12,
   	user_id: 1,
 	image: File.open(Rails.root.join('public', 'images', 'pic-7.jpg'))
+},
+{
+	name: "Чесменский бой в ночь с 25 на 26 июня 1770 года",
+	title: "1923",
+	author: "Айвазовский",
+	content: "",
+  	category_id:12,
+	user_id:2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-15.jpg'))
+},
+{
+	name: "Гигиея",
+	title: "1901",
+	author: "Гюстав Климт",
+	content: "",
+  	category_id:12,
+	user_id:2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-8.jpg'))
+},
+{
+	name: "Ариэль",
+	title: "1800-1810",
+	author: "Иоганн Генри Фюзли",
+	content: "",
+  	category_id:12,
+	user_id:2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-9.jpg'))
+},
+{
+	name: "Ветка цветущего миндаля",
+	title: "1854",
+	author: "Винсенс Ван Гог",
+	content: "",
+  	category_id:12,
+	user_id:2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-10.jpg'))
+},
+{
+	name: "Подсолнухи",
+	title: "1899",
+	author: "Винсент Ван Гог",
+	content: "Постимпрессионизм",
+  	category_id:12,
+  	user_id: 1,
+	image: File.open(Rails.root.join('public', 'images', 'pic-2.jpg'))
+},
+{
+	name: "Капо ди Ноли",
+	title: "1898",
+	author: "Поль Синьяк",
+	content: "",
+  	category_id:12,
+	user_id:2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-11.jpg'))
+},
+{
+	name: "Молодой Рути в Селейране",
+	title: "1882",
+	author: "Анри Тулуз-Лотрек",
+	content: "",
+  	category_id:12,
+	user_id:2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-16.jpg'))
+},
+{
+	name: "Плясун",
+	title: "1790",
+	author: "Гойя",
+	content: "",
+  	category_id:12,
+	user_id:2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-12.jpg'))
+},
+{
+	name: "Пшеничное поле с кипарисами",
+	title: "1889",
+	author: "Винсент Ван Гог",
+	content: "",
+  	category_id:12,
+	user_id:2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-13.jpg'))
+},
+{
+	name: "Гигиея",
+	title: "1901",
+	author: "Гюстав Климт",
+	content: "",
+  	category_id:12,
+	user_id:2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-14.jpg'))
+},
+{
+	name: "Крик",
+	title: "1905",
+	author: "Эдвард Мунк",
+	content: "Экспрессионизм",
+  	category_id:12,
+  	user_id: 2,
+	image: File.open(Rails.root.join('public', 'images', 'pic-6.jpg'))
 }
 ]
 

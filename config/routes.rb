@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'main/index'
   get 'admin/index'
   get 'admin', to: 'admin#index'
 
@@ -34,6 +35,6 @@ end
   get 'comments/:id', to: 'comments#show'
 
   get 'posts/:id', to: 'posts#show'
-  root 'posts#index'
+  root 'main#index'
 
 end

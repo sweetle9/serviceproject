@@ -19,6 +19,8 @@ body{
    url("fonts/SuisseIntl-SemiBold.woff") format("woff"),
    url("fonts/SuisseIntl-SemiBold.woff2") format("woff2");
  }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&display=swap');
+
  .avatar_round {
   border-radius: 50px;
 }
@@ -402,14 +404,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.post_container {
-  transition: all 0.2s ease;
-  position: relative;
-  width: 21vw;
-  background: white;
-  margin-bottom: 1vw;
-  color: black;
-}
 .pi, .edit, .new, .ci, .newpost, .editpost{
   width: 53.54vw;
 }
@@ -731,13 +725,6 @@ body {
 #black {
   color: black;
 }
-.info {
-  padding: 22px;
-  min-height: 115px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .cover {
   height:40vw;
 }
@@ -786,9 +773,9 @@ body {
   object-fit: cover;
   width: 100%;
   min-height: 100%;
-  /* height: auto; */
-  /* min-height: 100%;
-  min-width: 100%; */
+  height: auto;
+  min-height: 100%
+  min-width: 100%; 
 }
 .pic {
   overflow: hidden;
@@ -988,4 +975,154 @@ p#black.postname2 {
   width: 20vw;
   height: 5vw;
   margin-top: 3vw;
+}
+.firstblock {
+  display: inline-block;
+  width:18%;
+  margin-right: 2.25vw;
+  margin-top: 0;
+  position: relative;
+  vertical-align: top;
+}
+.secondblock {
+  display: inline-block;
+  width: 18%;
+  margin-right: 2.25vw;
+  margin-top: 0;
+  position: relative;
+  vertical-align: top;
+}
+.thirdblock {
+  display: inline-block;
+  width: 18%;
+  margin-right: 2.25vw;
+  margin-top: 0;
+  position: relative;
+  vertical-align: top;
+}
+.fourthdblock {
+  display: inline-block;
+  width: 18%;
+  margin-right: 2.25vw;
+  margin-top: 0;
+  position: relative;
+  vertical-align: top;
+}
+.fifthdblock {
+  display: inline-block;
+  width: 18%;
+  margin-right: 0;
+  margin-top: 0;
+  position: relative;
+  vertical-align: top;
+  margin-right: 0;
+}
+.AllPostiks {
+  position: relative;
+  display: block;
+  margin-top: 10%;
+}
+.AIconAddL {
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  cursor: pointer;
+}
+
+.AIconAddL:after {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 0.4vw;
+  width: 100%;
+  background: linear-gradient(90deg, #B4FF68 0%, #20133E 41.5%, #000000 100%);
+  box-shadow: 1px -0.1px 0.9px rgba(255, 57, 247, 0.96), -1px 1px 2px rgba(180, 255, 104, 0.81), -2px 0px 3px rgba(180, 255, 104, 0.4);
+  top: 50%;
+  left: 50%;
+}
+
+.AIconAddL:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, #B4FF68 0%, #20133E 41.5%, #000000 100%);
+  box-shadow: 1px -0.1px 0.9px rgba(255, 57, 247, 0.96), -1px 1px 2px rgba(180, 255, 104, 0.81), -2px 0px 3px rgba(180, 255, 104, 0.4);
+  height: 100%;
+  width: 0.4vw;
+}
+.M_Painting-caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 2vw;
+}
+.batoncard {
+  display: block;
+  position: relative;
+  padding-top: 1.4vw;
+  margin-left: 1%;
+}
+.imgcard {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 16.46vw;
+  height: auto;
+  border-radius: 0.2vw;
+}
+.postcontainer {
+/*  transition: all 0.2s ease;
+*/position: relative;
+  display: block;
+  width: 16.46vw;
+  margin-bottom: 4vw;
+}
+.info h3 {
+  padding-top: 1.4vw;
+  margin: 0;
+}
+.info p {
+  padding-top: 0;
+  margin: 0;
+}
+.banner_warp img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin:  0 auto;
+}
+.banner_warp {
+  top: 0%;
+  margin: 0;
+}
+.whole_width {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin-top: 4%;
+}
+.banner_warp h2 {
+  font-family: Cormorant;
+  font-size: 48px;
+  font-weight: 600;
+  position: absolute;
+  margin-top: -13.5%;
+  color: white;
+  left: 5%;
+}
+.banner_warp h3 {
+  font-family: Suisse Intl;
+  font-size: 24px;
+  position: absolute;
+  font-weight: 300;
+  margin-top: -5.5%;
+  color: white;
+  left: 5%;
 }

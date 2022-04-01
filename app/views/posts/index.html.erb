@@ -9,25 +9,11 @@
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
+	<%= react_component 'O_AllPosts', { posts: @posts } %>
 
-<div class="cats">
-	<p><%= link_to "Все", "../posts" %></p>
-	<% Category.all.each do |cat| %>
-		<%= link_to cat.name, posts_path(category: cat.name) %>
-	<% end %>
 </div>
 
-
-<div class="all_container">
-
-	<div class="left_menu">
-			<p class="second"><%= link_to "Посты", "../posts" %></p>
-			<p><%= link_to "Пользователи", users_path %></p>
-			<p><%= link_to "Категории", categories_path %></p>
-			<p><%= link_to 'Новый пост', new_post_path %></p>
-	</div>
-
-	<div class="all_post">
+	<!-- <div class="all_post">
 		<% @posts.each do |post| %>
 			<%= link_to post do %>
 			<div class="post_container">
@@ -48,5 +34,5 @@
 			</div>
 			<% end %>
 		<% end %>
-	</div>
+	</div> -->
 </div>

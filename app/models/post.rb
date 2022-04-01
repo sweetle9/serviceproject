@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
-		scope :filter_by_starts_with, -> (name) { where("name like ?", "%#{name}%")}
+		# scope :filter_by_starts_with, -> (name) { where("name like ?", "%#{name}%")}
+		scope :filter_by_starts_with, -> (search) { where("name like :search or title like :search or content like :search", search: "%#{search}%")}
 		scope :filter_by_user, -> (user) { where user: user }
 		scope :filter_by_category, -> (category) { where category: category }
 		validates :category, :presence => true
@@ -13,6 +14,4 @@ class Post < ApplicationRecord
 
 			belongs_to :user
 			belongs_to :category
-
-		scope :filter_by_starts_with, -> (name) { where("name like ?", "%#{name}%")}
 end

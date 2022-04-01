@@ -6,7 +6,7 @@ class M_catform extends React.Component {
       this.state = {
         name: props.category.name ? props.category.name : '',
         description: props.category.description ? props.category.description : '',
-        display_in_navbar: props.category.display_in_navbar ? props.category.display_in_navbar : false
+        display_in_navbar: props.category.display_in_navbar ? props.category.display_in_navbar : true
       };
       this.handleNameChange = this.handleNameChange.bind(this);
       this.handleDescriptionChange = this.handleDescriptionChange.bind(this);

@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p class="third"><%= link_to "← назад", "../posts" %></p>
-
 <div class="cover">
   <%= image_tag(@post.image.url, alt: 'Image', class: 'cov') if @post.image? %>
 	<div class="postinfo">

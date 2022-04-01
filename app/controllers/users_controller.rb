@@ -1,32 +1,19 @@
 class UsersController < ApplicationController
-    before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
 
   def index
     @users = User.all
-    render component: 'Users', props: { users: @users }
-    respond_to do |format|
-      format.html  # index.html.erb
-      format.json  { render :json => @users }
-    end
   end
 
-  def edit
+  def show
     @user = User.find(params[:id])
   end
 
-  def update
-    # current_user.update(params[:user])
-    # redirect_to current_user
-    respond_to do |format|
-    if @user.update(user_params)
-      format.html { redirect_to @user, notice: 'Пользователь was successfully переназначен.' }
-      format.json { render :show, status: :ok, location: @user }
-    else
-      format.html { render :edit }
-      format.json { render json: @user.errors, status: :unprocessable_entity }
-    end
-  end
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_path, notice: 'User deleted.'
   end
 
   def show
@@ -38,16 +25,6 @@ class UsersController < ApplicationController
     else
         render file: 'public/404', status: 404, formats: [:html]
     end
-  end
-
-def favorited?(post)
-    favorites.find_by(post_id: post.id).present?
-  end
-
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to users_path, notice: 'User deleted.'
   end
 
   def follow
@@ -63,24 +40,42 @@ def unfollow
 end
 
 def following
-@user = User.find(params[:id])
-if @user
-  @follow = @user.followed_users
-  render actions: :show
-  @following = @user.followees.all
+  @user = User.find(params[:id])
+  if @user
+    @follow = @user.followed_users
+    render actions: :show
+    @following = @user.followees.all
+  end
 end
-end
 
-
-private
-
-  def set_user
-     @user = User.find(params[:id])
+def favorited?(post)
+    favorites.find_by(post_id: post.id).present?
   end
 
+def edit
+  render 'users/edit'
+end
+
+def update
+  respond_to do |format|
+    if @user.update(user_params)
+      format.html { redirect_to @user, notice: 'Пользователь был переназначен.' }
+      format.json { render :show, status: :ok, location: @user }
+    else
+      format.html { render :edit }
+      format.json { render json: @user.errors, status: :unprocessable_entity }
+    end
+  end
+end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = User.find(params[:id])
+    end
+  # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:email, :username, :admin, :password, :avatar)
+    params.require(:user).permit(:username, :email, :admin, :password, :avatar)
   end
-
 
 end

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= react_component 'Tests' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag Ckeditor.cdn_url %>
@@ -20,8 +19,18 @@
     <p class="alert"><%= alert %></p>
   <% end %>
 
+    <header>
+    
+        <!-- <nav>
+            <%= link_to "Промо", promo_path %>
+            <%= link_to "О нас", about_path %>
+            <%= link_to "Блог", posts_path %>
+        </nav> -->
+    </header>
+
   <body>
-      <div class="top_menu">
+
+  <div class="top_menu">
     <%= link_to "Reset", posts_path %>
   	<% Category.all.each do |cat| %>
     <%= link_to cat.name, request.params.merge(category: cat.id) %> |
@@ -39,15 +48,7 @@
         <%= link_to "Панель администрирования", admin_path %>
       <% end %>
     </div>
-      <header>
-        <#%= image_tag("logo.svg") %>
-        <nav>
-            <%= link_to "Промо", promo_path %>
-            <%= link_to "О нас", about_path %>
-            <%= link_to "Блог", posts_path %>
 
-        </nav>
-    </header>
         <%= yield %>
         <% if notice %>
             <%= notice %>
