@@ -5,6 +5,7 @@ class O_PostPart extends React.Component {
   render () {
     return (
       <div className='postcontainer'>
+        <a className="postlink" href={`/posts/${this.props.post.id}`}>
         <div className="imgcard">
         <img className="fit-image"src={this.props.post.image.url}alt='Image'/>
         </div> 
@@ -16,7 +17,8 @@ class O_PostPart extends React.Component {
           <div className='batoncard'>
             <A_IconAddL />
           </div>
-        </div>  
+        </div>
+        </a>  
       </div>
     );
   }
