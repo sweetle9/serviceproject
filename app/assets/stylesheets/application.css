@@ -20,7 +20,6 @@ body{
    url("fonts/SuisseIntl-SemiBold.woff2") format("woff2");
  }
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&display=swap');
-
  .avatar_round {
   border-radius: 50px;
 }
@@ -433,50 +432,6 @@ body {
   height: 300px;
   margin-right: 2vw;
 }
-.pinfo {
-  display: flex;
-}
-.pinfo h1 {
-  font-family: Rubik Mono One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 108%;
-  color: #D2FB51;
-  padding: 0;
-  margin: 0;
-}
-.pinfo p {
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 108%;
-  color: #FFFFFF;
-}
-.statics {
-  margin-top: 4%;
-  display: flex;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 108%;
-  color: #FFFFFF;
-  align-items: baseline
-}
-.statics > * {
-  margin-right: 7vw;
-}
-.statics p {
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 108%;
-  color: #FFFFFF;
-      white-space: nowrap;
-}
 .fav {
   margin-right: 0;
 }
@@ -485,11 +440,6 @@ body {
 }
 .fav a:hover {
   color: white;
-}
-.ptinfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between
 }
 .postinfo {
   margin-top:0;
@@ -1034,12 +984,14 @@ p#black.postname2 {
   flex-direction: column;
   justify-content: space-between;
   margin-right: 2vw;
+  width: 80%;
 }
 .batoncard {
   display: block;
   position: relative;
   padding-top: 0.5vw;
   margin-left: 1%;
+  width: 20%;
 }
 .imgcard {
   position: relative;
@@ -1055,14 +1007,6 @@ p#black.postname2 {
   margin-bottom: 4vw;
   margin-left: 0.6vw;
   break-inside: avoid-column;
-}
-.info h3 {
-  padding-top: 1.4vw;
-  margin-top: -1vw;
-}
-.info p {
-  padding-top: 0;
-  margin-top: -1vw;
 }
 .banner_warp img {
   width: 100%;
@@ -1166,6 +1110,16 @@ p#black.postname2 {
 .Account_action {
   display: block;
   position: relative;
+}
+.info p {
+  text-decoration: none;
+  color: black;
+  margin-top: 0.1vw;
+}
+.info h3 {
+  text-decoration: none;
+  color: black;
+  margin:.5vw 0 0 0;
 }
 @media (min-width: 1680px) {}
 @media (max-width: 1440px) {
