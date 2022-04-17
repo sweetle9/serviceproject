@@ -984,52 +984,12 @@ p#black.postname2 {
   margin-top: 3vw;
 }
 .firstblock {
-  display: inline-block;
-  width:18%;
-  margin-right: 2.25vw;
+  columns: 5 auto;
   margin-top: 0;
   position: relative;
   vertical-align: top;
-}
-.secondblock {
-  display: inline-block;
-  width: 18%;
-  margin-right: 2.25vw;
-  margin-top: 0;
-  position: relative;
-  vertical-align: top;
-}
-.thirdblock {
-  display: inline-block;
-  width: 18%;
-  margin-right: 2.25vw;
-  margin-top: 0;
-  position: relative;
-  vertical-align: top;
-}
-.fourthdblock {
-  display: inline-block;
-  width: 18%;
-  margin-right: 2.25vw;
-  margin-top: 0;
-  position: relative;
-  vertical-align: top;
-}
-.fifthdblock {
-  display: inline-block;
-  width: 18%;
-  margin-right: 0;
-  margin-top: 0;
-  position: relative;
-  vertical-align: top;
-  margin-right: 0;
 }
 .AllPostiks {
-  position: relative;
-  display: block;
-  margin-top: 8%;
-}
-.AllPostiks_mob {
   position: relative;
   display: block;
   margin-top: 8%;
@@ -1085,16 +1045,16 @@ p#black.postname2 {
   position: relative;
   display: block;
   overflow: hidden;
-  width: 16.46vw;
   height: auto;
   border-radius: 0.2vw;
 }
 .postcontainer {
-/*  transition: all 0.2s ease;
-*/position: relative;
+  transition: all 0.2s ease;
+  position: relative;
   display: block;
-  width: 16.46vw;
   margin-bottom: 4vw;
+  margin-left: 0.6vw;
+  break-inside: avoid-column;
 }
 .info h3 {
   padding-top: 1.4vw;
@@ -1207,17 +1167,40 @@ p#black.postname2 {
   display: block;
   position: relative;
 }
-@media (min-width: 1680px) {
-  .AllPostiks_mob {
-    display: none;
+@media (min-width: 1680px) {}
+@media (max-width: 1440px) {
+  .firstblock {
+  columns: 4 auto;
+  margin-top: 0;
+  position: relative;
+  vertical-align: top;
   }
+}
+@media (max-width: 1366px) {}
+@media (max-width: 1280px) {
+  .firstblock {
+  columns: 3 auto;
+  margin-top: 0;
+  position: relative;
+  vertical-align: top;
   }
+}
+@media (max-width: 1024px) {
 
-  @media (max-width: 768px) {
-   .AllPostiks_mob {
-    display: block;
-   }
-  /* .AllPostiks {
-    display: none;
-   }*/
+}
+@media (max-width: 768px) {
+  .firstblock {
+  columns: 2 auto;
+  margin-top: 0;
+  position: relative;
+  vertical-align: top;
   }
+}
+@media (max-width: 320px) {
+  .firstblock {
+  columns: 1 auto;
+  margin-top: 0;
+  position: relative;
+  vertical-align: top;
+  }
+}

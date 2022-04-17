@@ -6,27 +6,7 @@ class O_AllPosts extends React.Component {
     return (
       <div className='AllPostiks'>
         <div className="firstblock">
-        {this.props.posts.slice(0,3).map(post => (
-           <O_PostPart post={post}/>
-        ))}
-        </div>
-        <div className="secondblock">
-        {this.props.posts.slice(3,6).map(post => (
-           <O_PostPart post={post}/>
-        ))}
-        </div>
-        <div className="thirdblock">
-        {this.props.posts.slice(6,9).map(post => (
-           <O_PostPart post={post}/>
-        ))}
-        </div>
-        <div className="fourthdblock">
-        {this.props.posts.slice(9,12).map(post => (
-           <O_PostPart post={post}/>
-        ))}
-        </div>
-        <div className="fifthdblock">
-        {this.props.posts.slice(12,16).map(post => (
+        {this.props.posts.slice(0,16).map(post => (
            <O_PostPart post={post}/>
         ))}
         </div>

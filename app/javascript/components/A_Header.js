@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import A_search from "./A_search.js"
 import A_avatar from "./A_avatar.js"
 
 
@@ -51,7 +50,7 @@ class A_Header extends React.Component {
 
         <div className="header_right">
           <a href="#">
-            <A_search/>
+    
           </a>
 
           <div className="Account_action">
