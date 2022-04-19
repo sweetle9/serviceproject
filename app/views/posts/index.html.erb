@@ -3,10 +3,10 @@
 <p id="notice"><%= notice %></p>
 
 <%= form_tag posts_path, :method => 'get' do %>
-  <p>
+  <!-- <p>
     <%= text_field_tag :starts_with, params[:starts_with] %>
     <%= submit_tag "Search", :name => nil %>
-  </p>
+  </p> -->
 <% end %>
 
 	<%= react_component 'O_AllPosts', { posts: @posts } %>

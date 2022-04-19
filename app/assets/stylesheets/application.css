@@ -326,19 +326,35 @@ input[type="submit"]{
 }
 .logo {
   width: 100%;
-  height: auto;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   position: relative;
+  flex-direction: row;
   z-index: 1000;
-  background-size: contain;
   vertical-align: top;
   margin-top: 2%;
   padding: 0;
   text-align: center;
 }
-.logo img {
-  width: 100%;
-  height: 100;
+.logo-line1 {
+  position: relative;
+  display: block;
+  height: 9.43vw;
+  border-left: 2px solid #000000;
+}
+.logo-line2 {
+  position: relative;
+  display: block;
+  height: 9.43vw;
+  border-left: 2px solid #000000;
+}
+.logo h1 {
+  font-size: 10.85vw;
+  margin: 0;
+  padding: 0;
+}
+.logo p {
+  font-size: 3.77vw;
 }
 .acc {
   display: flex;
@@ -946,8 +962,8 @@ p#black.postname2 {
 }
 .AIconAddL {
   position: relative;
-  width: 3vw;
-  height: 3vw;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
 
@@ -955,12 +971,11 @@ p#black.postname2 {
   content: '';
   position: absolute;
   transform: translate(-50%, -50%);
-  height: 0.4vw;
+  height: 2.3px;
   width: 100%;
-  background: linear-gradient(90deg, #B4FF68 0%, #20133E 41.5%, #000000 100%);
-  box-shadow: 1px -0.1px 0.9px rgba(255, 57, 247, 0.96), -1px 1px 2px rgba(180, 255, 104, 0.81), -2px 0px 3px rgba(180, 255, 104, 0.4);
-  top: 50%;
+  background-color: black;
   left: 50%;
+  top: 50%;
 }
 
 .AIconAddL:before {
@@ -969,10 +984,9 @@ p#black.postname2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: linear-gradient(90deg, #B4FF68 0%, #20133E 41.5%, #000000 100%);
-  box-shadow: 1px -0.1px 0.9px rgba(255, 57, 247, 0.96), -1px 1px 2px rgba(180, 255, 104, 0.81), -2px 0px 3px rgba(180, 255, 104, 0.4);
+  background-color: black;
   height: 100%;
-  width: 0.4vw;
+  width: 2.3px;
 }
 .M_Painting-caption {
   display: flex;
@@ -991,7 +1005,8 @@ p#black.postname2 {
   position: relative;
   padding-top: 0.5vw;
   margin-left: 1%;
-  width: 20%;
+  width: 50px;
+  height: 50px;
 }
 .imgcard {
   position: relative;
@@ -1129,6 +1144,20 @@ p#black.postname2 {
   position: relative;
   vertical-align: top;
   }
+  .AIconAddL {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.batoncard {
+  display: block;
+  position: relative;
+  padding-top: 0.5vw;
+  margin-left: 1%;
+  width: 40px;
+  height: 40px;
+}
 }
 @media (max-width: 1366px) {}
 @media (max-width: 1280px) {
@@ -1140,7 +1169,13 @@ p#black.postname2 {
   }
 }
 @media (max-width: 1024px) {
-
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 5vw;
+    width: 80%;
+  }
 }
 @media (max-width: 768px) {
   .firstblock {
@@ -1149,6 +1184,21 @@ p#black.postname2 {
   position: relative;
   vertical-align: top;
   }
+  .AIconAddL {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.batoncard {
+  display: block;
+  position: relative;
+  padding-top: 0.5vw;
+  margin-left: 1%;
+  width: 30px;
+  height: 30px;
+}
+
 }
 @media (max-width: 320px) {
   .firstblock {
