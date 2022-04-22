@@ -8,6 +8,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
@@ -15,3 +16,12 @@ ActiveStorage.start()
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");
 ReactRailsUJS.useContext(componentRequireContext);
+
+    $(document).ready(function() {
+    $(".header_burger").click(function() {
+    $(".header_burger, .header_menu").toggleClass("active");
+  });
+  $('.header_menu').click(function(){
+     $('.header_burger, .header_menu').removeClass('active');
+  });
+    });

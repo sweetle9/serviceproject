@@ -14,12 +14,18 @@ body{
 
  @font-face {
    font-family: "SuisseIntlSemiBold";
-   font-style: normal;
+   font-style: semibold;
    src: url("fonts/SuisseIntl-SemiBold.ttf") format("ttf"),
    url("fonts/SuisseIntl-SemiBold.woff") format("woff"),
    url("fonts/SuisseIntl-SemiBold.woff2") format("woff2");
  }
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&display=swap');
+ @font-face {
+   font-family: "Steelfish-Bold";
+   font-style: semibold;
+   src: url("fonts/SteelfishRg-Bold.ttf") format("ttf"),
+   url("fonts/SteelfishRg-Bold.woff") format("woff"),
+   url("fonts/SteelfishRg-Bold.woff2") format("woff2");
+ }
  .avatar_round {
   border-radius: 50px;
 }
@@ -116,10 +122,75 @@ body{
   color: #444;
   padding-left: .8vw;
 }
+.actions_sbcr {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.header_menu {
+  display: block;
+  position: relative;
+  height: auto;
+  height: 8vw;
+}
+.header_menu p {
+  color: black;
+  font-family: Steelfish-Bold;
+  font-weight: 400;
+  font-size: 6vw;
+  margin-top: 0;
+  margin-bottom: -4vw;
+  margin-right: 4vw;
+}
+.header_menu p:last-child {
+  margin-right: 0;
+}
+.header_wrap {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.3vw 0vw;
+  top: 0vw;
+  height: 8vw;
+}
+.searchfield{
+    margin: 0;
+    width: 43.097vw;
+    height: 3.472vw;
+    border: 2px solid black;
+    display: flex;
+}
+.searchfield > input{
+  width: 43.056vw;
+  height: 3.472vw;
+  margin: 0;
+  background: none;
+  border: none;
+  padding-left: 1.7vw;
+  font-family: 'Suisse Intl';
+  font-weight: 400;
+  font-size: 1.111vw;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: #101010;
+  opacity: 0.5;
+}
+.searchfield > .actions_sbcr{
+  padding: 0;
+  width: 8.333vw;
+  height: 3.472vw;
+  cursor: pointer;
+}
 .search form input[type="submit"]{
   width: 1.7vw;
   height: 1.7vw;
-  background-image: url("search.svg");;
+  background-image: url("search_icon.svg");;
   background-size: 100%;
   margin-top: .3vw;
   margin-right: 1vw;
@@ -325,6 +396,7 @@ input[type="submit"]{
   width: auto !important;
 }
 .logo {
+  align-items: center;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -332,20 +404,27 @@ input[type="submit"]{
   flex-direction: row;
   z-index: 1000;
   vertical-align: top;
-  margin-top: 2%;
   padding: 0;
   text-align: center;
+}
+.logo a {
+  text-decoration: none;
+  color: black;
 }
 .logo-line1 {
   position: relative;
   display: block;
   height: 9.43vw;
+  margin: 0;
+  padding: 0;
   border-left: 2px solid #000000;
 }
 .logo-line2 {
   position: relative;
   display: block;
   height: 9.43vw;
+  margin: 0;
+  padding: 0;
   border-left: 2px solid #000000;
 }
 .logo h1 {
@@ -355,6 +434,16 @@ input[type="submit"]{
 }
 .logo p {
   font-size: 3.77vw;
+  text-decoration: none;
+  color: black;
+}
+.Hash {
+  width: 7vw;
+  height: 7vw;
+}
+.Hash img {
+  width: 100%;
+  height: 100%;
 }
 .acc {
   display: flex;
@@ -1057,33 +1146,7 @@ p#black.postname2 {
   color: white;
   left: 5%;
 }
-.header {
-  position: absolute;
-  z-index: 999;
-  display: block;
-  top: 8vw;
-  width: 100%;
-  height: 4.44vw;
-  vertical-align: top;
-  z-index: 1000;
-  left: 0;
-  background-color: rgba(18, 37, 45, 1);
-  /*box-shadow: 0px 6px 20px rgba(195, 255, 26, 0.5);*/
-}
-.header p {
-  color: white;
-  font-family: Suisse Intl;
-  font-weight: 400;
-  font-size: 1.25vw;
-}
-.header_wrap {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin:  0vw 4vw;
-  padding: 0.3vw 0vw;
-}
+
 .header_left {
   position: relative;
   display: flex;
@@ -1178,6 +1241,37 @@ p#black.postname2 {
   }
 }
 @media (max-width: 768px) {
+  .header_menu.active {
+  position: absolute;
+  z-index: 999;
+  display: block;
+  top: 0vw;
+  width: 100%;
+  height: 1000%;
+  vertical-align: top;
+  z-index: 1000;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s ease 0s;
+  /*box-shadow: 0px 6px 20px rgba(195, 255, 26, 0.5);*/
+}
+.header_menu.active p {
+  color: black;
+  font-family: Steelfish-Bold;
+  font-weight: 400;
+  font-size: 18.10vw;
+  margin-top: 0;
+  margin-bottom: -4vw;
+}
+.header_wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin:  0vw 4vw;
+  padding: 0.3vw 0vw;
+  top: 20vw;
+}
   .firstblock {
   columns: 2 auto;
   margin-top: 0;
@@ -1190,6 +1284,61 @@ p#black.postname2 {
   height: 30px;
   cursor: pointer;
 }
+.header_burger {
+    display: block;
+    position: relative;
+    width: 9vw;
+    height: 4vw;
+    z-index: 2000;
+    margin-right: 6vw;
+  }
+  .header_burger span {
+    position: absolute;
+    background-color: black;
+    left: 0;
+    width: 100%;
+    height: 0.4vw;
+    top: 1.8vw;
+    transition: all 0.3s ease 0s;
+  }
+  .header_burger:before,
+  .header_burger:after {
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 0.4vw;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header_burger:before {
+    top:0;
+  }
+  .header_burger:after {
+    bottom: 0;
+  }
+  .header_menu {
+    top:0;
+    display: none;
+  }
+  .header_burger.active span {
+    transform: scale(0);
+  }
+  .header_burger.active:before {
+    transform: rotate(45deg);
+    top: 2vw;
+  }
+  .header_burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 1.3vw;
+  }
+  .header_mob {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 3vw;
+  }
 .batoncard {
   display: block;
   position: relative;
@@ -1206,5 +1355,31 @@ p#black.postname2 {
   margin-top: 0;
   position: relative;
   vertical-align: top;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
   }
 }
